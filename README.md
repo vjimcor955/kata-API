@@ -53,3 +53,5 @@ docker-compose up -d
 |/editBrewer  |Modifier une brasserie                 |  PUT     |
 |/delBeer     |Supprimer une bière                    |  DELETE  |
 |/delBrewer   |Supprimer une brasserie                |  DELETE  |
+
+## Contributeurs (langages par ordre alphabétique)
