@@ -25,7 +25,7 @@ Le but du kata est de faire une API fonctionnelle avec CRUD sur les différentes
 
 ## Objectifs
 - [ ]  Cloner le dépot git
-- [ ]  Créer une nouvelle branche (nom : `usermame github`)
+- [ ]  Créer une nouvelle branche (ex. : `usermame/language`)
 - [ ]  Ajouter un container docker (pour le language de votre choix) au docker-compose
 - [ ]  Mise en place du **`C`**`reate`
 - [ ]  Mise en place du **`R`**`ead`
