@@ -34,7 +34,11 @@ docker-compose up -d
 - [ ]  Créer les différentes requètes pour afficher les infos vouluent
 - [ ]  Pouvoir tester l’API avec postman, curl, httpie, etc…
 - [ ] Faire une page qui document les méthodes de l’API
-- [ ]  
+
+Pour aller plus loin
+- [ ] Se poser des questions sur la pagination dans le cas de résultats importants
+- [ ] Utilisation de [swagger](https://swagger.io/tools/open-source/open-source-integrations/) dans le langage choisi
+
 
 ## Description des routes à utiliser
 
