@@ -1,16 +1,16 @@
 # Kata API
-Kata: créer une API fonctionnelle avec CRUD sur les différentes tables d'une base de donnée MYSQL.
+Kata: créer une [API](https://github.com/OAI/OpenAPI-Specification) fonctionnelle avec [CRUD](https://www.codecademy.com/articles/what-is-crud) sur les différentes tables d'une base de donnée MYSQL.
 
 ## But
 Cet exercice permet de travailler l'integration de docker dans un projet, la creation et l'utilisation d'une API.
 L'idée est aussi d'apprendre les différentes methodes HTTP et de les utiliser.
 
 ## Ce dont nous avons besoin
-- Docker
-- Docker-compose
+- [Docker](https://www.docker.com/)
+- [Docker-compose](https://docs.docker.com/compose/)
 
 ## Comment procéder
-[Forker](https://github.com/epfl-dojo/kata-fleche/#fork-destination-box) le repo et créer une branche (`git checkout -b username/langage` par exemple `git checkout -b nicolasreymond/vuejs`, depuis votre fork). Faites ensuite une pull request pour l'ajouter à ce repo en vous ajoutant comme contributeur en bas de ce fichier.
+[Forker](https://github.com/epfl-dojo/kata-fleche/#fork-destination-box) le repo et créer une branche (`git checkout -b username/langage` par exemple `git checkout -b nicolasreymond/php`, depuis votre fork). Faites ensuite une pull request pour l'ajouter à ce repo en vous ajoutant comme contributeur en bas de ce fichier.
 
 ## Mise en place
 À chaque fois qu'il y a un changement dans un fichier docker :
@@ -23,17 +23,17 @@ docker-compose up -d
 ```
 
 ## Objectifs
-- [ ]  Forcker le dépot git
-- [ ]  Créer une nouvelle branche (ex. : `usermame/language`)
-- [ ]  Ajouter un container docker (pour le language de votre choix) au docker-compose
-- [ ] Comprendre comment détecter les types de requêtes HTTP (GET, POST, PUT, PATCH, DELETE)
-- [ ]  Mise en place du **`C`**`reate`
-- [ ]  Mise en place du **`R`**`ead`
-- [ ]  Mise en place du **`U`**`pdate`
-- [ ]  Mise en place du **`D`**`elete`
-- [ ]  Créer les différentes requètes pour afficher les infos vouluent
-- [ ]  Pouvoir tester l’API avec postman, curl, httpie, etc…
-- [ ] Faire une page qui document les méthodes de l’API
+- [ ] Forcker le dépot git
+- [ ] Créer une nouvelle branche (ex. : `usermame/language`)
+- [ ] Ajouter un container docker (pour le language de votre choix) au docker-compose
+- [ ] Comprendre comment détecter les types de [requêtes HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode) (GET, POST, PUT, PATCH, DELETE)
+- [ ] Mise en place du **`C`**`reate`
+- [ ] Mise en place du **`R`**`ead`
+- [ ] Mise en place du **`U`**`pdate`
+- [ ] Mise en place du **`D`**`elete`
+- [ ] Créer les différentes requètes pour afficher les infos vouluent
+- [ ] Pouvoir tester l’API avec [postman](https://www.postman.com/), [curl](https://curl.haxx.se/), [httpie](https://httpie.org/), etc…
+- [ ] Faire une page qui documente l'utilisation de l’API (avec un example de requète pour chaques commandes)
 
 Pour aller plus loin
 - [ ] Se poser des questions sur la pagination dans le cas de résultats importants
