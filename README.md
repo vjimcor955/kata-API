@@ -1,10 +1,12 @@
 # Kata API
 
+Kata: créer une API fonctionnelle avec CRUD sur les différentes tables d'une base de donnée MYSQL.
 
 ## But
-Le but du kata est de faire une API fonctionnelle avec CRUD sur les différentes tables avec une page de documentation des “endpoints”.
+Cet exercice permet de travailler l'integration de docker dans un projet, la creation et l'utilisation d'une API.
+L'idée est aussi d'apprendre les différentes methodes HTTP et de les utiliser.
 
-## Ce dont nous aurions besoin
+## Ce dont nous avons besoin
 - Docker
 - Docker-compose
 
