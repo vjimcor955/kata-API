@@ -1,85 +1,91 @@
+> **Note**
+> Si alguien quiere usar docker, docker-compose, adelante.
+> Pero ahora mismo no es nuestro objetivo.
+> Los objetivos son los que aparecen tras ### Objetivos del módulo
+
+
 # Kata API
-Kata : créer une [API](https://github.com/OAI/OpenAPI-Specification)
-fonctionnelle avec [CRUD](https://www.codecademy.com/articles/what-is-crud) sur
-les différentes tables d'une base de donnée MySQL.
+Kata : crear una [API](https://github.com/OAI/OpenAPI-Specification)
+funcional [CRUD](https://www.codecademy.com/articles/what-is-crud) sobre
+varias tablas en MySQL.
 
-## But
-Cet exercice permet de travailler l'intégration de Docker dans un projet, la
-création et l'utilisation d'une API.
-L'idée est aussi d'apprendre les différentes [méthodes
-HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode) et de les
-utiliser.
+## Objetivo
+Creación y utilización de una API y aprender y usar diferentes [métodos
+HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods).
+Además de trabajar con Docker en un proyecto.
 
-## Pré-requis
-Ce Kata assume que vous êtes à l'aise avec
-[Git](https://git-scm.com/), [Docker](https://www.docker.com/) et
+## Prerrequisitos
+En la Kata se asume familiaridad con las siguientes tecnologías
+[Git](https://git-scm.com/), [Docker](https://www.docker.com/) y
 [Docker-compose](https://docs.docker.com/compose/).
 
-## Comment procéder
-[Forkez](https://github.com/epfl-dojo/kata-api/#fork-destination-box) ce repo et
-créez une branche (`git checkout -b username/langage` par exemple `git checkout
--b nicolasreymond/php`, depuis votre fork). Faites ensuite une pull request pour
-l'ajouter à ce repo en vous ajoutant comme contributeur en bas de ce fichier.
+## Procedimiento
+[Hacer un fork](https://github.com/epfl-dojo/kata-api/#fork-destination-box) del repositorio,
+crear una rama (`git checkout -b username/langage` por ejemplo `git checkout
+-b nicolasreymond/php`, desde vuestro fork). Haced un pull request para añadirlo a este 
+repo y añadiéndoos al final de este fichero como autores. 
 
-## Mise en place
-À chaque fois qu'il y a un changement dans un fichier docker :
+## Puesta en marcha
+En cada cambio de un fichero en el contenedor tenemos que hacer:
 ```bash
 docker-compose up --build
 ```
-Et pour simplement démarrer les containers docker:
+Y para lanzar los contenedores:
 ```bash
 docker-compose up -d
 ```
 
-## Objectifs
+## Objetivos de la Kata
 - [ ] Forcker le dépot Git
 - [ ] Créer une nouvelle branche (ex. : `usermame/langage`)
 - [ ] Ajouter un container Docker (pour le langage de votre choix) 
   au docker-compose
-- [ ] Comprendre comment détecter les types de [requêtes HTTP](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode)
+### Objetivos del módulo  
+- [ ] Comprender cómo detectar las diferentes  [peticiones HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
   (GET, POST, PUT, PATCH, DELETE)
-- [ ] Mise en place du CRUD pour l'endpoint `/beer*`
-   - [ ] Mise en place du **`C`**`reate`
-   - [ ] Mise en place du **`R`**`ead`
-   - [ ] Mise en place du **`U`**`pdate`
-   - [ ] Mise en place du **`D`**`elete`
-- [ ] Mise en place de la lecture des endpoints `/brewerie*`, `/categorie*` et `/style*`
-- [ ] Tester l’API avec
+- [ ] Implementación del CRUD sobre el endpoint `/beer*`
+   - [ ] Implementar la creación       **`C`**`reate`
+   - [ ] Implementar la lectura        **`R`**`ead`
+   - [ ] Implementar la actualilzación **`U`**`pdate`
+   - [ ] Implementar el borrado        **`D`**`elete`
+- [ ] Implementar la lectura de los endpoints `/brewerie*`, `/categorie*` et `/style*`
+- [ ] Probar la API con
   - [postman](https://www.postman.com/),
   - [insomnia](https://insomnia.rest), 
   - [curl](https://curl.haxx.se/), 
   - [httpie](https://httpie.org/), etc…  
   et indiquer ces requêtes dans un fichier de résultats
-- [ ] Faire une page qui documente l'utilisation de l’API 
-  (avec un example de requête pour chaques commandes)
+- [ ] Hacer un documento que explique cómo utilizar la API
+  (con ejemplos de cada una de las consultas)
 
-Pour aller plus loin
-- [ ] Se poser des questions sur la pagination dans le cas de résultats 
-  importants, par exemple en utilisant le HEADER et le méthode HTTP 
-  [HEAD](https://developer.mozilla.org/fr/docs/Web/HTTP/M%C3%A9thode/HEAD)
-- [ ] Intégration de [swagger](https://swagger.io/tools/open-source/open-source-integrations/) 
-  dans le langage choisi
+Ir más lejos
+- [ ] Implementar la paginación para consultar que devuelven muchos datos 
+    por ejemplo con el método HTTP  HEAD.
+  [HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
+- [ ] Integración con [swagger](https://swagger.io/tools/open-source/open-source-integrations/) 
+  del lenguaje escogido.
+- [ ] Modificaciónes para poder subir imágenes de las cervezas  
 
 
-## Description des routes à utiliser
+## Descripción de rutas a utilizar
 
-| Endpoint         | Résultat                                | Méthode  |
+| Endpoint         | Resultado                               | Método   |
 |----------------- |-----------------------------------------|:--------:|
-|`/beers`          | Affiche toutes les bières               | GET      |
-|`/beer`           | Ajouter une bière                       | POST     |
-|`/beer/{id}`      | Affiche la bière qui à l'id `{id}`      | GET      |
-|`/beer/{id}`      | Supprimer une bière                     | DELETE   |
-|`/beer/{id}`      | Modifier une bière                      | PUT      |
-|`/beer/{id}`      | Modifier partiellement une bière        | PATCH    |
-|`/breweries`      | Affiche toutes les brasseries           | GET      |
-|`/brewerie/{id}`  | Affiche la brasserie `{id}`             | GET      |
-|`/categories`     | Affiche toutes les catégories           | GET      |
-|`/categorie/{id}` | Affiche la catégorie `{id}`             | GET      |
-|`/styles`         | Affiche toutes les styles               | GET      |
-|`/style/{id}`     | Affiche le style `{id}`                 | GET      |
+|`/beers`          | Muestra todas las cervezas              | GET      |
+|`/beer`           | Añadir una cerveza                      | POST     |
+|`/beer/{id}`      | Mostrar la cerveza con el id `{id}`     | GET      |
+|`/beer/{id}`      | Eliminar una cerveza                    | DELETE   |
+|`/beer/{id}`      | Modificar una cerveza                   | PUT      |
+|`/beer/{id}`      | Modificar parcialmente una cerveza      | PATCH    |
+|`/breweries`      | Listar todas las cerveceras             | GET      |
+|`/brewerie/{id}`  | Mostrar la cervecera `{id}`             | GET      |
+|`/categories`     | Listar todas las categorías             | GET      |
+|`/categorie/{id}` | Mostrar la categoría `{id}`             | GET      |
+|`/styles`         | Listar todos los estilos -style-        | GET      |
+|`/style/{id}`     | Mostrar el estilo -style- `{id}`        | GET      |
 
 
-## Contributeurs (langages par ordre alphabétique)
+## Colaboradores (idiomas en orden alfabético)
 
 [Laravel](https://github.com/SaphireVert/Kata-API/tree/saphirevert/laravel) → [![saphirevert-repos][saphirevert-shield]][saphirevert-url]
 
