@@ -54,7 +54,7 @@ docker-compose up -d
   - [insomnia](https://insomnia.rest), 
   - [curl](https://curl.haxx.se/), 
   - [httpie](https://httpie.org/), etc…  
-  et indiquer ces requêtes dans un fichier de résultats
+  y guardar esas peticiones en un fichero de resultados.
 - [ ] Hacer un documento que explique cómo utilizar la API
   (con ejemplos de cada una de las consultas)
 
@@ -64,7 +64,7 @@ Ir más lejos
   [HEAD](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/HEAD)
 - [ ] Integración con [swagger](https://swagger.io/tools/open-source/open-source-integrations/) 
   del lenguaje escogido.
-- [ ] Modificaciónes para poder subir imágenes de las cervezas  
+- [ ] Modificaciones para poder subir imágenes de las cervezas  
 
 
 ## Descripción de rutas a utilizar
