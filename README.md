@@ -36,10 +36,9 @@ docker-compose up -d
 ```
 
 ## Objetivos de la Kata
-- [ ] Forcker le dépot Git
-- [ ] Créer une nouvelle branche (ex. : `usermame/langage`)
-- [ ] Ajouter un container Docker (pour le langage de votre choix) 
-  au docker-compose
+- [ ] Hacer un *fork* del repositorio Git
+- [ ] Crear una nueva  rama (ex. : `usermame/language`)
+- [ ] Añadir un contenedor docker (para el lenguage elegido) al  docker-compose (NO ES NECESARIA ESTA PARTE)
 ### Objetivos del módulo  
 - [ ] Comprender cómo detectar las diferentes  [peticiones HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
   (GET, POST, PUT, PATCH, DELETE)
