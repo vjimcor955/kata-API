@@ -75,7 +75,7 @@ Ir más lejos
 |`/beer/{id}`      | Mostrar la cerveza con el id `{id}`     | GET      |
 |`/beer/{id}`      | Eliminar una cerveza                    | DELETE   |
 |`/beer/{id}`      | Modificar una cerveza                   | PUT      |
-|`/beer/{id}`      | Modificar parcialmente una cerveza      | PATCH    |
+|`/beer/{id}`      | Modificar parcialmente una cerveza      | PUT o PATCH    |
 |`/breweries`      | Listar todas las cerveceras             | GET      |
 |`/brewerie/{id}`  | Mostrar la cervecera `{id}`             | GET      |
 |`/categories`     | Listar todas las categorías             | GET      |
