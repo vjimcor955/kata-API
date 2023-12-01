@@ -2,6 +2,7 @@ package com.example.APIcerverzas.modelo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.Date;
@@ -10,11 +11,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 @Table(name = "beers")
 public class Beer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private int brewery_id = 0;
@@ -28,6 +29,5 @@ public class Beer {
     private String filepath;
     private String descript;
     private int add_user = 0;
-    private Date last_mod;          // Date default value -> 0000-00-00 00:00:00   ??????????????????
-
+    private Date last_mod;
 }

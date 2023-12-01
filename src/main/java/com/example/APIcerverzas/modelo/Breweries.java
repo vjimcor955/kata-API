@@ -11,10 +11,9 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Brewerie {
+public class Breweries {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "id", nullable = false)
     private Long id;
 
     private String name;
@@ -29,6 +28,5 @@ public class Brewerie {
     private String filepath;
     private String descript;
     private int add_user = 0;
-    private Date last_mod;          // default value [0000-00-00 00:00:00]
-
+    private Date last_mod;
 }

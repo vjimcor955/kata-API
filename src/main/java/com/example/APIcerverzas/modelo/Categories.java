@@ -10,14 +10,11 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Category {
-
+public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "id", nullable = false)
     private Long id;
 
     private String cat_name;
-    private Date last_mod;          // default value [0000-00-00 00:00:00]
-
+    private Date last_mod;
 }

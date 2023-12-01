@@ -9,15 +9,12 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/beer")
 public class BeerControlador {
-
     private final BeerRepositorio beerRepositorio;
-
     public BeerControlador(BeerRepositorio beerRepositorio) {
         this.beerRepositorio = beerRepositorio;
     }
@@ -40,8 +37,8 @@ public class BeerControlador {
      * @return Postea la cerveza
      */
     @PostMapping("/beer")
-    public Beer postBeer(@Valid @RequestBody Beer beer) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(beerRepositorio.save(beer)).getBody();
+    public ResponseEntity<Beer> postBeer(@Valid @RequestBody Beer beer) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(beerRepositorio.save(beer));
     }
 
     /**
